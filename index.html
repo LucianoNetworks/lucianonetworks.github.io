@@ -1,52 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luely Tecnologia</title>
+
+<title>Luely Tecnologia | Desenvolvimento de Software</title>
+
+<meta name="description" content="Luely Tecnologia - empresa especializada em desenvolvimento de software, soluções tecnológicas e sistemas personalizados.">
+<meta name="keywords" content="desenvolvimento de software, tecnologia, sistemas, programação, C#, .NET, soluções tecnológicas">
+<meta name="author" content="Luely Tecnologia">
+
+<link rel="icon" href="images/icon.png">
+
+<!-- Open Graph (WhatsApp / LinkedIn / Facebook) -->
+
+<meta property="og:title" content="Luely Tecnologia">
+<meta property="og:description" content="Empresa especializada em desenvolvimento de software e soluções tecnológicas.">
+<meta property="og:image" content="https://www.luely.com.br/images/logo5.png">
+<meta property="og:url" content="https://www.luely.com.br">
+<meta property="og:type" content="website">
 
 <style>
 
+:root{
+--bg1:#031a2b;
+--bg2:#0c3550;
+--text:#ffffff;
+--muted:#cfd8dc;
+--muted2:#9fb3c8;
+}
+
+*{
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#031a2b,#0c3550);
-    color:white;
-    text-align:center;
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:24px 16px;
+background:linear-gradient(135deg,var(--bg1),var(--bg2));
+color:var(--text);
+text-align:center;
 }
 
 .container{
-    max-width:900px;
+width:100%;
+max-width:900px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:18px;
 }
 
 .logo{
-    width:800px;
-    margin-bottom:40px;
+width:min(800px,92vw);
+height:auto;
+display:block;
+margin:0 auto 10px;
+object-fit:contain;
 }
 
 p{
-    font-size:22px;
-    margin-top:20px;
-    color:#cfd8dc;
+font-size:clamp(16px,2.2vw,22px);
+margin:0;
+color:var(--muted);
+line-height:1.45;
 }
 
 strong{
-    font-size:26px;
-    color:#9fb3c8;
+font-size:clamp(18px,2.6vw,26px);
+color:var(--muted2);
+font-weight:700;
 }
 
 footer{
-    position:absolute;
-    bottom:20px;
-    width:100%;
-    text-align:center;
-    font-size:14px;
-    color:#9fb3c8;
+position:fixed;
+left:0;
+right:0;
+bottom:12px;
+text-align:center;
+font-size:13px;
+color:var(--muted2);
+opacity:.9;
+pointer-events:none;
+}
+
+@media (max-width:420px){
+body{padding:18px 12px;}
+footer{bottom:10px;font-size:12px;}
+.container{gap:14px;}
+}
+
+@media (max-height:520px){
+footer{position:static;margin-top:18px;}
 }
 
 </style>
@@ -55,15 +107,19 @@ footer{
 
 <body>
 
-<div class="container">
+<main class="container">
 
-<img src="/images/logo5.png" class="logo" alt="Luely Tecnologia Logo">
+<img src="images/logo5.png"
+class="logo"
+alt="Luely Tecnologia Logo"
+width="800"
+height="400">
 
 <p>Site em desenvolvimento</p>
 
 <p><strong>Em breve</strong></p>
 
-</div>
+</main>
 
 <footer>
 © 2026 Luely Tecnologia
@@ -71,7 +127,3 @@ footer{
 
 </body>
 </html>
-
-
-
-
