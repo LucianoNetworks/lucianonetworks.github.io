@@ -1,77 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luely Tecnologia</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Luely Tecnologia</title>
+  <style>
+    :root{
+      --bg1:#031a2b;
+      --bg2:#0c3550;
+      --text:#ffffff;
+      --muted:#cfd8dc;
+      --muted2:#9fb3c8;
+    }
 
-<style>
+    *{ box-sizing:border-box; }
 
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#031a2b,#0c3550);
-    color:white;
-    text-align:center;
-}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px 16px; /* respiro no mobile */
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+      color:var(--text);
+      text-align:center;
+    }
 
-.container{
-    max-width:900px;
-}
+    .container{
+      width:100%;
+      max-width:900px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+    }
 
-.logo{
-    width:800px;
-    margin-bottom:40px;
-}
+    /* Logo responsivo */
+    .logo{
+      width: min(800px, 92vw); /* no desktop mantém grande, no mobile limita pela tela */
+      height:auto;
+      display:block;
+      margin:0 auto 10px;
+      object-fit:contain;
+    }
 
-p{
-    font-size:22px;
-    margin-top:20px;
-    color:#cfd8dc;
-}
+    p{
+      font-size: clamp(16px, 2.2vw, 22px);
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+    }
 
-strong{
-    font-size:26px;
-    color:#9fb3c8;
-}
+    strong{
+      font-size: clamp(18px, 2.6vw, 26px);
+      color: var(--muted2);
+      font-weight: 700;
+    }
 
-footer{
-    position:absolute;
-    bottom:20px;
-    width:100%;
-    text-align:center;
-    font-size:14px;
-    color:#9fb3c8;
-}
+    footer{
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:12px;
+      text-align:center;
+      font-size: 13px;
+      color: var(--muted2);
+      opacity: .9;
+      pointer-events:none;
+    }
 
-</style>
+    /* Ajustes finos pra telas pequenas */
+    @media (max-width: 420px){
+      body{ padding:18px 12px; }
+      footer{ bottom:10px; font-size:12px; }
+      .container{ gap:14px; }
+    }
 
+    /* Evita footer tapar conteúdo em telas muito baixas */
+    @media (max-height: 520px){
+      footer{ position:static; margin-top:18px; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <!-- Nota: aqui usei caminho relativo (sem barra inicial) pra não dar dor de cabeça -->
+    <img src="images/logo5.png" class="logo" alt="Luely Tecnologia Logo">
 
-<div class="container">
+    <p>Site em desenvolvimento</p>
+    <p><strong>Em breve</strong></p>
+  </div>
 
-<img src="/images/logo5.png" class="logo" alt="Luely Tecnologia Logo">
-
-<p>Site em desenvolvimento</p>
-
-<p><strong>Em breve</strong></p>
-
-</div>
-
-<footer>
-© 2026 Luely Tecnologia
-</footer>
-
+  <footer>© 2026 Luely Tecnologia</footer>
 </body>
 </html>
-
-
-
-
