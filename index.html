@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,135 +9,70 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-
-font-family: "Segoe UI", Arial, sans-serif;
-
-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-background: radial-gradient(circle at 70% 70%, #0d2a44, #051321);
-
-color:white;
-
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(120deg,#0b2a44,#071c2f);
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
 }
-
-/* container */
 
 .container{
-
-text-align:center;
-
-max-width:900px;
-
-padding:40px;
-
+    text-align:center;
 }
-
-/* logo */
 
 .logo{
-
-width:220px;
-
-margin-bottom:30px;
-
-}
-
-/* titulo */
-
-h1{
-
-font-size:52px;
-
-font-weight:700;
-
-letter-spacing:1px;
-
-}
-
-.brand{
-
-color:#36b5ff;
-
-}
-
-/* subtitulo */
-
-.subtitle{
-
-margin-top:20px;
-
-font-size:20px;
-
-color:#c5d6e5;
-
-}
-
-/* em breve */
-
-.soon{
-
-margin-top:12px;
-
-font-size:26px;
-
-color:#9fb8cc;
-
-font-weight:600;
-
-}
-
-/* responsivo */
-
-@media (max-width:700px){
-
-.logo{
-width:160px;
+    width:140px;
+    margin-bottom:25px;
 }
 
 h1{
-font-size:36px;
+    font-size:60px;
+    margin:0;
+    letter-spacing:2px;
 }
 
-.subtitle{
-font-size:18px;
+h1 span{
+    color:#2fb4ff;
 }
 
-.soon{
-font-size:22px;
+p{
+    font-size:24px;
+    margin-top:25px;
+    color:#cfd8dc;
 }
 
+footer{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+    font-size:14px;
+    color:#9fb3c8;
 }
 
 </style>
-
 </head>
-
 
 <body>
 
 <div class="container">
 
-<img src="Images/logo3.png" class="logo" alt="Luely Tecnologia Logo">
+<img src="Images/Logo3.png" class="logo" alt="Luely Tecnologia Logo">
 
-<h1>LUELY <span class="brand">TECNOLOGIA</span></h1>
+<h1>LUELY <span>TECNOLOGIA</span></h1>
 
-<p class="subtitle">Site profissional em desenvolvimento</p>
-
-<p class="soon">Em breve</p>
+<p>Site profissional em desenvolvimento</p>
+<p><strong>Em breve</strong></p>
 
 </div>
 
-</body>
+<footer>
+© 2026 Luely Tecnologia
+</footer>
 
+</body>
 </html>
