@@ -62,6 +62,7 @@ a:hover{opacity:.92}
   filter: drop-shadow(0 10px 20px rgba(0,0,0,.35));
 }
 
+/* NAV (desktop) */
 nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
 nav a{
   font-size:14px;color:var(--muted);
@@ -86,6 +87,23 @@ nav a:hover{background:var(--chip);color:var(--text)}
   color:#0b0f14;border-color:transparent;
 }
 .btn.primary:hover{background:#fff}
+
+/* ✅ MENU MOBILE (NOVO) */
+.menu-btn{
+  display:none;              /* desktop: escondido */
+  height:40px;
+  padding:0 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  font-size:16px;
+  cursor:pointer;
+}
+.menu-btn:hover{background:rgba(255,255,255,.07)}
+
+/* quando o nav tem class="nav" (seu HTML), mantém o comportamento do nav normal */
+.nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center}
 
 /* HERO */
 .hero{padding:54px 0 18px}
@@ -255,6 +273,7 @@ textarea{min-height:120px;resize:vertical}
   nav{justify-content:center}
   .actions{justify-content:center}
 }
+
 @media (max-width: 900px){
   .hero .grid{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
@@ -264,4 +283,32 @@ textarea{min-height:120px;resize:vertical}
   .formGrid{grid-template-columns:1fr}
   h1{font-size:36px}
   .links{justify-content:flex-start}
+
+  /* ✅ MOBILE NAV */
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+
+  /* esconde o nav no mobile e abre com .open */
+  .nav{
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:6px;
+    padding:10px;
+    border:1px solid var(--line);
+    border-radius:18px;
+    background:rgba(255,255,255,.03);
+  }
+  .nav.open{display:flex}
+  .nav a{padding:10px 12px}
+}
+
+/* ✅ MOBILE PEQUENO */
+@media (max-width: 480px){
+  nav a{padding:8px 8px;font-size:13px}
+  .btn{height:38px;padding:0 12px;font-size:13px}
+  h1{font-size:30px}
+  .lead{font-size:15px}
+  section{padding:22px 0}
+  .panel{padding:14px}
+  .card{padding:14px}
 }

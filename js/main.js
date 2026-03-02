@@ -29,3 +29,22 @@ ${msg || "-"}
     window.location.href = mailto;
   });
 }
+
+/* ✅ MENU MOBILE (NOVO) */
+const menuBtn = document.getElementById('menuBtn');
+const mainNav = document.getElementById('mainNav');
+
+if (menuBtn && mainNav) {
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // fecha o menu ao clicar em algum link (melhor UX)
+  mainNav.addEventListener('click', (e) => {
+    if (e.target && e.target.tagName === 'A') {
+      mainNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
